@@ -39,6 +39,10 @@ public class SinhvienService {
 	}
 
 	public void delete(int id) {
+		Sinhvien sinhvien = new Sinhvien();
+		sinhvien.setId(id);
+		sinhvien.setLophoc(null);
+		save(sinhvien);
 		restTemplate.delete(url + "/" + id);
 	}
 
